@@ -1,5 +1,6 @@
 <script lang="ts">
 	// Skrypt do strony
+    boardState = [['','',''], ['','',''], ['','','']];
 </script>
 
 <main>
