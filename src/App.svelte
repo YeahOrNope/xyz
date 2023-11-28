@@ -5,12 +5,15 @@
 <main>
     <!-- Struktura strony -->
     <table>
-        <tr>
-            {#each [0,1,2] as i}
-            <td class="cell">
-                O
-            </td>
-        </tr>
+        {#each [0,1,2] as i}
+            <tr>
+                {#each [0,1,2] as j}
+                    <td class="cell">
+                        ({i}, {j})
+                    </td>
+                {/each}
+            </tr>
+        {/each}
     </table>
 </main>
 
