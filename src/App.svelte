@@ -4,8 +4,23 @@
 
 <main>
     <!-- Struktura strony -->
+    <table>
+        <tr>
+            <td class="cell">
+                O
+            </td>
+        </tr>
+    </table>
 </main>
 
 <style>
     /* Styl strony */
+    .cell {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        color: black;
+        text-align: center;
+        font-size: 40px;
+    }
 </style>
