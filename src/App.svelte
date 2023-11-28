@@ -17,7 +17,7 @@
             <tr>
                 {#each [0,1,2] as j}
                     <td class="cell">
-                        ({i}, {j})
+                        (boardState[i], [j])
                     </td>
                 {/each}
             </tr>
