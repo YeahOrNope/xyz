@@ -5,6 +5,9 @@
     for (let i = 0; i < 3; i++) {
         boardState.push(['','','']);
     }
+
+
+    //console.log(boardState);
 </script>
 
 <main>
