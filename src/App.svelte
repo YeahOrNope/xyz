@@ -6,6 +6,7 @@
     <!-- Struktura strony -->
     <table>
         <tr>
+            {#each [0,1,2] as i}
             <td class="cell">
                 O
             </td>
