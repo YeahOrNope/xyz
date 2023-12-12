@@ -6,8 +6,8 @@
         ['', '', '']
     ];
 
-    function markSquare() {
-        console.log("Clecked");
+    function markSquare(x: number, y: number) {
+        console.log(`Clicked ${x} ${y}`);
     }
 </script>
 
@@ -17,7 +17,7 @@
         {#each [0, 1, 2] as y}
             <tr>
                 {#each [0, 1, 2] as x}
-                    <td class="cell" on:click={() => {}}>
+                    <td class="cell" on:click={() => {markSquare(x, y)}}>
                         {boardState[y][x]}
                     </td>
                 {/each}
