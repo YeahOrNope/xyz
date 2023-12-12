@@ -26,7 +26,7 @@
             } else {
                 boardState[y][x] = "X";
             }
-            checkWin();
+            console.log(checkWin());
             counter+=1
         }
     }
