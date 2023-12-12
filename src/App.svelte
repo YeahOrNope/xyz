@@ -6,8 +6,15 @@
         ['', '', '']
     ];
 
+    let turn = "O";
+
     function markSquare(x: number, y: number) {
-        boardState[y][x] = "o";
+        boardState[y][x] = "O";
+        if (turn === "O") {
+            turn = "X";
+        } else{
+            turn = "O";
+        }
     }
 </script>
 
