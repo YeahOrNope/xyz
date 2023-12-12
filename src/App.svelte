@@ -6,7 +6,6 @@
         ['', '', '']
     ];
 
-    let turn = "O";
     let counter = 0
 
     function markSquare(x: number, y: number){
