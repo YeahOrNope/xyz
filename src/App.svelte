@@ -7,7 +7,7 @@
     ];
 
     function markSquare(x: number, y: number) {
-        console.log(`Clicked ${x} ${y}`);
+        boardState[y][x] = "o";
     }
 </script>
 
