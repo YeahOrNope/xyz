@@ -7,13 +7,16 @@
     ];
 
     let turn = "O";
+    let counter = 0
 
-    function markSquare(x: number, y: number) {
-        boardState[y][x] = turn;
-        if (turn === "O") {
-            turn = "X";
-        } else {
-            turn = "O";
+    function markSquare(x: number, y: number){
+        if (boardState[y][x] === ""){
+            if (counter % 2 === 0){
+                boardState[y][x] = "o";
+            } else {
+                boardState[y][x] = "X";
+            }
+            counter+=1
         }
     }
 </script>
@@ -32,6 +35,7 @@
             </tr>
         {/each}
     </table>
+    {counter}
 </main>
 
 <style>
