@@ -9,10 +9,10 @@
     let turn = "O";
 
     function markSquare(x: number, y: number) {
-        boardState[y][x] = "O";
+        boardState[y][x] = turn;
         if (turn === "O") {
             turn = "X";
-        } else{
+        } else {
             turn = "O";
         }
     }
