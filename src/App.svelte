@@ -2,7 +2,7 @@
     import { draw } from "svelte/transition";
 
     // Skrypt do strony
-    const boardState = [
+    let boardState = [
         ['', '', ''], 
         ['', '', ''], 
         ['', '', '']
@@ -56,7 +56,17 @@
             }
             counter+=1
 
-            if 
+            if (counter === 9) {
+                gameState = "OX"
+            }
+        }
+
+        function resetGame(){
+            boardState = [
+                ['','',''],
+                ['','',''],
+                ['','','']
+            ]
         }
     }
 
@@ -88,6 +98,8 @@
             x
         {/if}
     {/if}
+
+    <botton on:click={resetGame}>Play again</botton>
 </main>
 
 <style>
@@ -99,5 +111,9 @@
         color: black;
         text-align: center;
         font-size: 40px;
+    }
+
+    main{
+        font-size
     }
 </style>
