@@ -7,6 +7,17 @@
     ];
 
     let counter = 0
+    let gameState = "";
+
+    function checkWin() {
+        for (let i = 0; i<3; i++) {
+            if (boardState[0][i] === "" 
+            && boardState[0][i] === boardState[1][i] 
+            && boardState[1][i] === boardState[2][i]) {
+                return true;
+            }
+        }
+    }
 
     function markSquare(x: number, y: number){
         if (boardState[y][x] === ""){
@@ -15,6 +26,7 @@
             } else {
                 boardState[y][x] = "X";
             }
+            checkWin();
             counter+=1
         }
     }
