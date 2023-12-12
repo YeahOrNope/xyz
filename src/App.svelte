@@ -10,32 +10,31 @@
     let gameState = "";
 
     function checkWin() {
-        for (let i = 0; i<3; i++) {
-            if (boardState[0][i] === "" 
-            && boardState[0][i] === boardState[1][i] 
-            && boardState[1][i] === boardState[2][i]) {
+        for (let i = 0; i < 3; i += 1) {
+            if (boardState[0][i] !== "" &&
+            boardState[0][i] === boardState[1][i] &&
+            boardState[1][i] === boardState[2][i]) {
                 return true;
             }
 
-            if (boardState[i][0] === "" 
-            && boardState[i][0] === boardState[i][1] 
-            && boardState[i][1] === boardState[i][2]) {
+            if (boardState[i][0] !== "" &&
+            boardState[i][0] === boardState[i][1] &&
+            boardState[i][1] === boardState[i][2]) {
                 return true;
             }
         }
 
-        if (boardState[0][0] === "" 
-            && boardState[0][0] === boardState[1][1] 
-            && boardState[1][1] === boardState[2][2]) {
-                return true;
-            }
-        
-        if (boardState[0][2] === "" 
-        && boardState[0][2] === boardState[1][1] 
-        && boardState[1][1] === boardState[2][0]) {
+        if (boardState[0][0] !== "" &&
+        boardState[0][0] === boardState[1][1] &&
+        boardState[1][1] === boardState[2][2]) {
             return true;
         }
 
+        if (boardState[0][2] !== "" &&
+        boardState[0][2] === boardState[1][1] &&
+        boardState[1][1] === boardState[2][0]) {
+            return true;
+        }
         return false;
     }
 
@@ -46,11 +45,19 @@
             } else {
                 boardState[y][x] = "X";
             }
-            const isWin = checkWin();
-            console.log(isWin);
+        const isWin = checkWin();
+        if (isWin){
+            if counter % 2 === 0){
+                gameState = "O";
+            } else {
+                gameState = "X";
+            }
             counter+=1
+
+            if 
         }
     }
+
 </script>
 
 <main>
@@ -60,14 +67,16 @@
             <tr>
                 {#each [0, 1, 2] as x}
                     <td class="cell" on:click={() => {markSquare(x, y)}}>
-                        <!-- {boardState[y][x]} -->
-                        ({x}, {y})
+                        {boardState[y][x]}
+                        <!-- ({x}, {y}) -->
                     </td>
                 {/each}
             </tr>
         {/each}
     </table>
-    {counter}
+    {#if gameSate === "O"}
+        O wins
+    {/if}
 </main>
 
 <style>
