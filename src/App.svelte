@@ -1,23 +1,16 @@
 <script lang="ts">
-	// Skrypt do strony
-    let boardState = [];
-
-    for (let i = 0; i < 3; i++) {
-        boardState.push(['','','']);
-    }
-
-
-    //console.log(boardState);
+    // Skrypt do strony
+    const boardState = [['', '', ''], ['', '', ''], ['', '', '']];
 </script>
 
 <main>
     <!-- Struktura strony -->
     <table>
-        {#each [0,1,2] as i}
+        {#each [0, 1, 2] as y}
             <tr>
-                {#each [0,1,2] as j}
+                {#each [0, 1, 2] as x}
                     <td class="cell">
-                        (boardState[i], [j])
+                        {boardState[y][x]}
                     </td>
                 {/each}
             </tr>
