@@ -18,7 +18,8 @@
             <tr>
                 {#each [0, 1, 2] as x}
                     <td class="cell" on:click={() => {markSquare(x, y)}}>
-                        {boardState[y][x]}
+                        <!-- {boardState[y][x]} -->
+                        ({x}, {y})
                     </td>
                 {/each}
             </tr>
