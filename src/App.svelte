@@ -7,7 +7,7 @@
     ];
 
     function markSquare() {
-
+        console.log("Clecked");
     }
 </script>
 
