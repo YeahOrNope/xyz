@@ -5,6 +5,10 @@
         ['', '', ''], 
         ['', '', '']
     ];
+
+    function markSquare() {
+
+    }
 </script>
 
 <main>
@@ -13,7 +17,7 @@
         {#each [0, 1, 2] as y}
             <tr>
                 {#each [0, 1, 2] as x}
-                    <td class="cell">
+                    <td class="cell" on:click={() => {}}>
                         {boardState[y][x]}
                     </td>
                 {/each}
