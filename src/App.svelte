@@ -1,6 +1,10 @@
 <script lang="ts">
     // Skrypt do strony
-    const boardState = [['', '', ''], ['', '', ''], ['', '', '']];
+    const boardState = [
+        ['', '', ''], 
+        ['', '', ''], 
+        ['', '', '']
+        ];
 </script>
 
 <main>
