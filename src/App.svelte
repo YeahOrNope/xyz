@@ -16,13 +16,33 @@
             && boardState[1][i] === boardState[2][i]) {
                 return true;
             }
+
+            if (boardState[i][0] === "" 
+            && boardState[i][0] === boardState[i][1] 
+            && boardState[i][1] === boardState[i][2]) {
+                return true;
+            }
         }
+
+        if (boardState[0][0] === "" 
+            && boardState[0][0] === boardState[1][1] 
+            && boardState[1][1] === boardState[2][2]) {
+                return true;
+            }
+        
+        if (boardState[0][2] === "" 
+        && boardState[0][2] === boardState[1][1] 
+        && boardState[1][1] === boardState[2][0]) {
+            return true;
+        }
+
+        return false;
     }
 
     function markSquare(x: number, y: number){
         if (boardState[y][x] === ""){
             if (counter % 2 === 0){
-                boardState[y][x] = "o";
+                boardState[y][x] = "O";
             } else {
                 boardState[y][x] = "X";
             }
