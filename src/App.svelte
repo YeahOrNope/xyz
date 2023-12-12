@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { draw } from "svelte/transition";
+
     // Skrypt do strony
     const boardState = [
         ['', '', ''], 
@@ -68,14 +70,23 @@
                 {#each [0, 1, 2] as x}
                     <td class="cell" on:click={() => {markSquare(x, y)}}>
                         {boardState[y][x]}
-                        <!-- ({x}, {y}) -->
                     </td>
                 {/each}
             </tr>
         {/each}
     </table>
-    {#if gameSate === "O"}
+    {#if gameState === "O"}
         O wins
+    {:else if gameState === "X"}
+        X wins
+    {:else if gameState === "OX"}
+        draw
+    {:else}
+        Turn: {#if counter % 2 === 0}
+            0
+        {:else}
+            x
+        {/if}
     {/if}
 </main>
 
